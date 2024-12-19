@@ -137,6 +137,16 @@ $level = Trang0;
 							Email
 						</span>
 					</div>
+					<!-- <div class="p-t-31 p-b-9">
+						<span class="txt1">
+							Email
+						</span>
+						<div class="p-t-31 p-b-9">
+						<span class="txt1">
+							Email
+						</span>
+					</div> -->
+					</div>
 					<div class="wrap-input100 validate-input" data-validate = "Username is required">
 						<input class="input100" type="text" name="email" id="email" required>
 						<span class="focus-input100"></span>
