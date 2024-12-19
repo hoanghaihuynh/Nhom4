@@ -31,11 +31,28 @@ $level = Trang0;
 	<link rel="stylesheet" type="text/css" href="<?php echo $level . CSS . "main.css" ?>">
 	<!--===============================================================================================-->
 
+	<script type="text/javascript">
+		function validateform()
+	{
+		var password = document.getElementById('password').value;
+		var confirm  = document.getElementById('cfpassword').value;
+		
+		if(password!=confirm)
+				{
+					alert('Xác nhận mật khẩu chưa chính xác! ');
+				}
+		
+		else{
+			return true;
+				}
+		
+		return false;
+	}
+</script>
 </head>
-
 <body>
-
-<div class="limiter">
+	
+	<div class="limiter">
 		<div class="container-login100" style="background-image: url('<?php echo $level.IMG."bg-01.jpg"?>');">
 			<div class="wrap-login100 p-l-110 p-r-110 p-t-62 p-b-33">
 				<form class="login100-form validate-form flex-sb flex-w" action="<?php echo $level.CONT.'dangki.php' ?>" method="get"  onsubmit="return validateform()"> 
@@ -146,6 +163,23 @@ $level = Trang0;
 	
 
 	<div id="dropDownSelect1"></div>
+	
+<!--===============================================================================================-->
+	<script src="<?php echo $level.VEN."jquery/jquery-3.2.1.min.js"?>"></script>
+<!--===============================================================================================-->
+	<script src="<?php echo $level.VEN."animsition/js/animsition.min.js"?>"></script>
+<!--===============================================================================================-->
+	<script src="<?php echo $level.VEN."bootstrap/js/popper.js"?>"></script>
+	<script src="<?php echo $level.VEN."bootstrap/js/bootstrap.min.js"?>"></script>
+<!--===============================================================================================-->
+	<script src="<?php echo $level.VEN."select2/select2.min.js"?>"></script>
+<!--===============================================================================================-->
+	<script src="<?php echo $level.VEN."daterangepicker/moment.min.js"?>"></script>
+	<script src="<?php echo $level.VEN."daterangepicker/daterangepicker.js"?>"></script>
+<!--===============================================================================================-->
+	<script src="<?php echo $level.VEN."countdowntime/countdowntime.js"?>"></script>
+<!--===============================================================================================-->
+	<script src="<?php echo $level.JS."main.js"?>"></script>
 
 </body>
 
