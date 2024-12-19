@@ -132,6 +132,12 @@
                                                         </div>
                                                     </td>
 
+                                                    <!-- <td class="product-quantity">
+                                                        <div class="quantity buttons_added">
+                                                            <input type="number" name='<?php echo $post['masp']; ?>' size="4" class="input-text qty text" value="<?php echo $post['soluong']; ?>" min="1" max='<?php echo $max; ?>' step="1">
+                                                        </div>
+                                                    </td> -->
+
                                                     <!-- thành tiền -->
                                                     <td class="product-subtotal">
                                                         <span class="amount">
