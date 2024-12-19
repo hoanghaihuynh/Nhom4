@@ -61,7 +61,6 @@ if (count($DS_donhang) > 0)
 						<td><?php echo $dh['hinhthucGH']; ?></td>
 						<td><?php echo number_format($dh['ship'], 0, ',', '.') . ' VNĐ'; ?></td>
 						<td><?php echo $dh['trangthai']; ?></td>
-
 						<td>
 							<button type="button" class="btn btn-info" data-toggle="modal" data-target="<?php echo '#' . $id; ?>" style='width:120px;height:42px;font-size:14px;'>Xem</button>
 							<center>
@@ -73,7 +72,6 @@ if (count($DS_donhang) > 0)
 											<div class="modal-header">
 												<h3 class="modal-title" style="text-align: center;"><b>Chi tiết hóa đơn</b></h3>
 											</div>
-
 											<!-- Modal body -->
 											<div class="modal-body">
 												<table class='table-bordered'>
