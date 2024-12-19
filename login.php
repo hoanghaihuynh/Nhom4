@@ -43,7 +43,7 @@ $level = Trang0;
 <div class="limiter">
         <div class="container-login100" style="background-image: url('<?php echo $level . IMG . "bg-01.jpg"?>');">
             <div class="wrap-login100 p-l-110 p-r-110 p-t-62 p-b-33">
-                <form class="login100-form validate-form flex-sb flex-w" action='' method="POST">
+                <form class="login100-form validate-form flex-sb flex-w" action='<?php echo $level . CONT . 'dangnhap.php'; ?>' method="POST">
                     <span class="login100-form-title p-b-53">Sign In With</span>
                     <div class="p-t-31 p-b-9">
                         <span class="txt1">Username</span>
@@ -63,7 +63,18 @@ $level = Trang0;
                     </div>
                     <div>
                     <br>
-                        
+                        <i style="color:red">
+                            <?php
+                                if (isset($_GET['status'])) {
+                                    $status = $_GET['status']; // Hiển thị trạng thái đăng nhập, đăng kí
+                                    if ($status == 'error') {
+                                        echo "Tên Đăng Nhập hoặc Mật Khẩu không chính xác!";
+                                    } elseif ($status == 'new_user') {
+                                        echo "Tài khoản mới đã được tạo! Vui lòng đăng nhập.";
+                                    }
+                                }
+                            ?>
+                        </i>
                     </div>
 
                     <div class="container-login100-form-btn m-t-17">
@@ -72,7 +83,7 @@ $level = Trang0;
 
                     <div class="w-full text-center p-t-55">
                         <span class="txt2">Not a member?</span>
-                        <a href="" class="txt2 bo1">Sign up now</a>
+                        <a href="<?php echo $level . "signup.php" ?>" class="txt2 bo1">Sign up now</a>
                     </div>
                     
                 </form>
@@ -82,7 +93,23 @@ $level = Trang0;
         </div>
         
     </div>
-
+    
+<!--===============================================================================================-->
+<script src="<?php echo $level . VEN . "jquery/jquery-3.2.1.min.js"?>"></script>
+    <!--===============================================================================================-->
+    <script src="<?php echo $level . VEN . "animsition/js/animsition.min.js"?>"></script>
+    <!--===============================================================================================-->
+    <script src="<?php echo $level . VEN . "bootstrap/js/popper.js"?>"></script>
+    <script src="<?php echo $level . VEN . "bootstrap/js/bootstrap.min.js"?>"></script>
+    <!--===============================================================================================-->
+    <script src="<?php echo $level . VEN . "select2/select2.min.js"?>"></script>
+    <!--===============================================================================================-->
+    <script src="<?php echo $level . VEN . "daterangepicker/moment.min.js"?>"></script>
+    <script src="<?php echo $level . VEN . "daterangepicker/daterangepicker.js"?>"></script>
+    <!--===============================================================================================-->
+    <script src="<?php echo $level . VEN . "countdowntime/countdowntime.js"?>"></script>
+    <!--===============================================================================================-->
+    <script src="<?php echo $level . JS . "main.js"?>"></script>
 </body>
 
 </html>
