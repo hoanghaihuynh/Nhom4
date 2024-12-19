@@ -29,7 +29,7 @@
         color:white;
     }
 </style>
-
+<div class="footer-top-area" style="height:320px">
         <div class="zigzag-bottom"></div>
         <div class="container">
             <div class="row">
