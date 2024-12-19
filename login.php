@@ -75,6 +75,18 @@ $level = Trang0;
                                 }
                             ?>
                         </i>
+                        <!-- <i style="color:red">
+                            <?php
+                                if (isset($_GET['status'])) {
+                                    $status = $_GET['status']; // Hiển thị trạng thái đăng nhập, đăng kí
+                                    if ($status == 'error') {
+                                        echo "Tên Đăng Nhập hoặc Mật Khẩu không chính xác!";
+                                    } elseif ($status == 'new_user') {
+                                        echo "Tài khoản mới đã được tạo! Vui lòng đăng nhập.";
+                                    }
+                                }
+                            ?>
+                        </i> -->
                     </div>
 
                     <div class="container-login100-form-btn m-t-17">
@@ -93,7 +105,7 @@ $level = Trang0;
         </div>
         
     </div>
-    
+
 <!--===============================================================================================-->
 <script src="<?php echo $level . VEN . "jquery/jquery-3.2.1.min.js"?>"></script>
     <!--===============================================================================================-->
