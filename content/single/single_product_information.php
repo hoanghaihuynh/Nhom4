@@ -1,4 +1,4 @@
-<!--kiểm tra đánh giá -->
+
 <?php 
     $user = DP::run_query("SELECT * FROM taikhoan WHERE hoatdong=1 AND trangthai=1",[],2);
 
@@ -9,7 +9,7 @@
         $email = $user[0]['email'];
     }
 ?>
-<!-- end kiểm tra đánh giá  -->
+
 <div class="col-md-8">
     <div class="product-content-right">
          <div class="product-breadcroumb">
@@ -82,7 +82,6 @@
                 } 
                 ?>
 
-<!-- đánh giá -->
 <div role="tabpanel" class="tab-pane fade" id="profile">
     <form action="<?php echo $level.CONT.'addcomment.php' ?>" method="get" >
         <div class="submit-review">
@@ -118,9 +117,8 @@
         </div>
     </div>
 </div>
-<!-- end đánh giá  -->
 
-<!-- sản phẩm tương tự -->
+
 <div class="related-products-wrapper">
                             <h2 class="related-products-title">Sản Phẩm Tương Tự</h2>
                             <div class="related-products-carousel">
@@ -156,5 +154,3 @@
             </div>
         </div>
     </div>
-
-<!-- end sản phẩm tương tự  -->
