@@ -111,7 +111,20 @@ $count = count($Comment_List) + 1;
 			<?php 
 			foreach($Comment_List as $key)
 			{	
-				
+				$no = $key['STT'];
+				$productcode = $key['masp'];
+				$name = $key['name'];
+				$email = $key['email'];
+				$content =$key['noidung'];
+				$date =$key['ngaydang'];
+				$time =$key['giodang'];
+
+				$status = $key['trangthai'];
+				if($status == '0')
+					$status = 'Đã xóa';
+				elseif($status =='1')
+					$status = 'Duyệt';
+				$function="Delete";
 			?>
 
 			<tr>
