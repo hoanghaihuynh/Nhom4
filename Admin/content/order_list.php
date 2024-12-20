@@ -224,9 +224,9 @@
 		<tbody>
 			<?php
 			foreach ($Order_List as $key) {
-				$ordercode = $key['madh'];
+				$orderCode = $key['madh'];
 
-				$OrderDetails = DP::run_query("SELECT * FROM ctdh WHERE madh=?", [$ordercode], 2);
+				$OrderDetails = DP::run_query("SELECT * FROM ctdh WHERE madh=?", [$orderCode], 2);
 
 				$ngaydat = $key['ngaydat'];
 				$thoigian = $key['thoigian'];
@@ -242,7 +242,7 @@
 				$trangthai = $key['trangthai'];
 			?>
 				<tr>
-					<td><?php echo $ordercode; ?></td>
+					<td><?php echo $orderCode; ?></td>
 					<td><?php echo $account; ?></td>
 					<td><?php echo $customer; ?></td>
 					<td><?php echo $phone; ?></td>

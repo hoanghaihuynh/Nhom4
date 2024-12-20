@@ -40,7 +40,7 @@
                                     			<tr>
 	                                    			<th colspan="2" class='th'>Ngày và giờ</th>
 	                                    			<th colspan="4" class='th'>
-	                                    				<?php echo $ngayDat.' - '.$thoiGian; ?>
+	                                    				<?php echo $ngaydat.' - '.$thoigian; ?>
                                     				</th>
 	                                    		</tr>
                                     	</tbody>
