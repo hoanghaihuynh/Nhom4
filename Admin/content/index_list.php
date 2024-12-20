@@ -61,10 +61,10 @@
 					$status = "Sản phẩm mới";
 			?>
 			<tr>
-				<td><?php echo $productcode1; ?></td>
-				<td><?php echo $productname1; ?></td>
-				<td><?php echo $price1; ?></td>
-				<td><?php echo $status1; ?></td>
+				<td><?php echo $productcode; ?></td>
+				<td><?php echo $productname; ?></td>
+				<td><?php echo $price; ?></td>
+				<td><?php echo $status; ?></td>
 				<td><?php include('content_sanpham/button_ctsp.php'); ?></td>
 			</tr>
 			<?php 
