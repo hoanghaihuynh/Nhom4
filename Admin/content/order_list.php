@@ -34,7 +34,11 @@
 									<div class='form-group'>
 										<label for='ordercode'>Mã đơn hàng</label>
 										<select class='form-control' name='ordercode'>
+											<?php foreach ($Order_List as $key) { ?>
 
+												<option value='<?php echo $key['madh']; ?>'><?php echo $key['madh']; ?></option>
+
+											<?php } ?>
 										</select>
 									</div>
 
@@ -104,7 +108,11 @@
 									<div class='form-group'>
 										<label for='ordercode'>Mã đơn hàng</label>
 										<select class='form-control' name='ordercode'>
+											<?php foreach ($Order_List as $key) { ?>
 
+												<option value='<?php echo $key['madh']; ?>'><?php echo $key['madh']; ?></option>
+
+											<?php } ?>
 										</select>
 									</div>
 									<div class='form-group'>
@@ -221,10 +229,12 @@
 				$OrderDetails = DP::run_query("SELECT * FROM ctdh WHERE madh=?", [$ordercode], 2);
 
 				$ngaydat = $key['ngaydat'];
+				$thoigian = $key['thoigian'];
 				$account = $key['username'];
 				$customer = $key['khachhang'];
 				$phone = $key['sdt'];
 				$address = $key['diachi'];
+				$email = $key['email'];
 				$tongtien = $key['tongtien'];
 				$hinhthuctt = $key['hinhthucTT'];
 				$hinhthucgh = $key['hinhthucGH'];
@@ -232,18 +242,18 @@
 				$trangthai = $key['trangthai'];
 			?>
 				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
+					<td><?php echo $ordercode; ?></td>
+					<td><?php echo $account; ?></td>
+					<td><?php echo $customer; ?></td>
+					<td><?php echo $phone; ?></td>
+					<td><?php echo $address; ?></td>
+					<td><?php echo $email; ?></td>
+					<td><?php echo number_format($tongtien, 0, ',', '.') . ' VNĐ'; ?></td>
+					<td><?php echo $hinhthuctt; ?></td>
+					<td><?php echo $hinhthucgh; ?></td>
+					<td><?php echo $ship . ' VNĐ'; ?></td>
+					<td><?php echo $trangthai; ?></td>
+					<td><?php include($level . CONT_ORDER . 'ctdonhang.php'); ?></td>
 				</tr>
 			<?php
 			}
