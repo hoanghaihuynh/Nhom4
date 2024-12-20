@@ -1,7 +1,7 @@
-<?php
-//auto increase product code
-$count = count($Product_List) + 1;
-?>
+<?php 
+	//auto increase product code
+	$count = count($Product_List) + 1;
+ ?>
 <style>
 	/* CSS */
 	th{
@@ -22,10 +22,10 @@ $count = count($Product_List) + 1;
 	</div>
 
 </div><!--/.row-->
-
+	
 <div class="panel panel-container">
 	<!-- nhóm button -->
-	<div class='btn-group-lg' style='margin: 0px 0px 20px 50px'>	
+	<div class='btn-group-lg' style='margin: 0px 0px 20px 50px'>
 		<?php 
 			include('content_sanpham/button_them.php');
 			include('content_sanpham/button_capnhat.php');
@@ -48,15 +48,28 @@ $count = count($Product_List) + 1;
 		    </tr>
 		</thead>
 		<tbody>
-			
+			<?php 
+			foreach($Product_List as $key)
+			{	
+				$productcode = $key['masp'];
+				$productname = $key['tensp'];
+				$price = "";
+				if(isset($key['giamoi']))
+					$price =$key['giamoi']." vnđ";
+				$status = "Ngừng kinh doanh";
+				if($key['trangthai'] == 1)
+					$status = "Sản phẩm mới";
+			?>
 			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
+				<td><?php echo $productcode1; ?></td>
+				<td><?php echo $productname1; ?></td>
+				<td><?php echo $price1; ?></td>
+				<td><?php echo $status1; ?></td>
+				<td><?php include('content_sanpham/button_ctsp.php'); ?></td>
 			</tr>
-			
+			<?php 
+			}
+			?>
 		</tbody>
 	</table>
 </div>
